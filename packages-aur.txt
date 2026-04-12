@@ -1,0 +1,9 @@
+antigravity
+bibata-cursor-theme-bin
+hotkeyhub-bin
+hyprprop-git
+meowrch-settings
+meowrch-tools
+mewline
+nemo-tags
+pawlette

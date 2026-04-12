@@ -1,0 +1,39 @@
+@use "theme.scss";
+@use "common/functions.scss";
+@use "variable.scss";
+
+$workspace-transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+
+#workspaces {
+  padding: 0.15em 0.6em;
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  & > button {
+    padding: functions.toEm(1.4) 0.4em;
+    transition: padding 0.05s steps(8);
+    border-radius: variable.$radius-large;
+
+    &:hover {
+      background-color: theme.$accent-color;
+      transition: $workspace-transition;
+
+      label {
+        color: theme.$background-base;
+      }
+    }
+
+    &.active {
+      font-weight: 800;
+      padding-left: functions.toEm(10);
+      padding-right: functions.toEm(10);
+      background-color: theme.$accent-color;
+      min-width: 1.1rem;
+      transition: $workspace-transition;
+
+      & > label {
+        color: theme.$background-base;
+      }
+    }
+  }
+}
