@@ -7,3 +7,5 @@ meowrch-tools
 mewline
 nemo-tags
 pawlette
+mpd-mpris
+

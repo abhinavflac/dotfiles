@@ -1,0 +1,7 @@
+
+# MPD Dynamic Files
+all-configs/.config/mpd/database
+all-configs/.config/mpd/log
+all-configs/.config/mpd/pid
+all-configs/.config/mpd/state
+all-configs/.config/mpd/sticker.sql

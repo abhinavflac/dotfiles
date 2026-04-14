@@ -8,6 +8,10 @@
   </tr>
 </table>
 *My personal Arch Linux dotfiles — automated for easy setup.*
+
+> [!TIP]
+> **The Audiophile's Soul**: This setup is built with a deep appreciation for high-fidelity music. Unlike generic desktops, every layer of this system—from the TUI clients to the dynamic status island—is tuned to prioritize a premium, distraction-free listening experience.
+
 <br><br/>
 <p align="center">
   <img src="https://img.shields.io/badge/Arch_Linux-A6DAF7?style=for-the-badge&logo=arch-linux&logoColor=1E1E2E"/>
@@ -62,6 +66,8 @@
 | **Notifications** | [Dunst](https://dunst-project.org) / [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) |
 | **Multiplexer** | [Tmux](https://github.com/tmux/tmux) |
 | **System Monitor** | [Btop](https://github.com/aristocratos/btop) |
+| **Music Server** | [MPD](https://www.musicpd.org/) |
+| **Music Client** | [RMPC](https://mierak.github.io/rmpc/) / [MPC](https://linux.die.net/man/1/mpc) |
 | **Fetch** | [Fastfetch](https://github.com/fastfetch-cli/fastfetch) |
 | **Config Manager** | [GNU Stow](https://www.gnu.org/software/stow) |
 
@@ -122,7 +128,9 @@ dotfiles/
         ├── btop/           # System monitor config
         ├── fastfetch/      # Fetch config
         ├── dunst/          # Notification daemon
-        └── swaync/         # Notification center
+        ├── swaync/         # Notification center
+        ├── mpd/            # Music Player Daemon config
+        └── rmpc/           # Beautiful TUI music client config
 ```
 
 ---
@@ -146,6 +154,19 @@ Mewline changes require a manual sync since it lives in `/opt/`:
 ```bash
 sudo rsync -a ~/dotfiles/custom-mewline/ /opt/mewline/
 ```
+
+---
+
+<a id="music-flow"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=MUSIC+ARCHITECTURE" width="450"/>
+
+The music system is built on a four-layer architecture for maximum control and aesthetic integration:
+
+- **Layer 1: The Core (MPD)** → A high-performance daemon running in the background, serving high-fedelity audio via PipeWire.
+- **Layer 2: The Command (MPC)** → A lightweight CLI used for global hotkeys (Play/Next/Prev) managed by Hyprland.
+- **Layer 3: The Interaction (RMPC)** → A beautiful, rust-powered TUI client for managing playlists and browsing your library.
+- **Layer 4: The Visual (Mewline)** → Dynamic Island integration via `mpd-mpris`, showing live track details and visualizers.
+
 ---
 
 <div align="center">

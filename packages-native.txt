@@ -133,6 +133,8 @@ meld
 mesa-utils
 micro
 modemmanager
+mpc
+mpd
 mtools
 nano
 nano-syntax-highlighting
@@ -195,6 +197,7 @@ reflector
 reflector-simple
 rofi
 rofimoji
+rmpc
 rsync
 rtkit
 s-nail
