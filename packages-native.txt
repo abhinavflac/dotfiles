@@ -4,7 +4,6 @@ alsa-plugins
 alsa-utils
 android-tools
 android-udev
-aspell
 awww
 b43-fwcutter
 base
@@ -40,25 +39,20 @@ dnsmasq
 dosfstools
 downgrade
 dracut
-duf
 e2fsprogs
 easyeffects
 efibootmgr
 efitools
 egl-wayland
-endeavouros-branding
 endeavouros-keyring
 endeavouros-mirrorlist
-eos-apps-info
 eos-dracut
 eos-hooks
 eos-hwtool
-eos-log-tool
 eos-packagelist
 eos-quickstart
 eos-rankmirrors
 ethtool
-ex-vi-compat
 exfatprogs
 f2fs-tools
 fastfetch
@@ -75,7 +69,6 @@ foomatic-db-nonfree-ppds
 foomatic-db-ppds
 ghostscript
 git
-glances
 gnome-disk-utility
 gnome-keyring
 gobject-introspection
@@ -93,7 +86,6 @@ gvfs-mtp
 haveged
 hdparm
 hwdetect
-hwinfo
 hypridle
 hyprland
 hyprlock
@@ -101,7 +93,6 @@ hyprpicker
 inetutils
 intel-media-driver
 intel-ucode
-inxi
 iptables
 iwd
 jfsutils
@@ -129,7 +120,6 @@ lvm2
 man-db
 man-pages
 mdadm
-meld
 mesa-utils
 micro
 modemmanager
@@ -180,9 +170,6 @@ polkit-gnome
 poppler-glib
 power-profiles-daemon
 python
-python-defusedxml
-python-jinja
-python-packaging
 python-pip
 python-pyalsa
 qalculate-gtk
@@ -216,7 +203,6 @@ systemd-sysvcompat
 tela-circle-icon-theme-dracula
 telegram-desktop
 texinfo
-tldr
 tmux
 tree
 ttf-bitstream-vera
@@ -241,7 +227,6 @@ visual-studio-code-bin
 vlc
 vulkan-intel
 waybar
-welcome
 wget
 which
 whois

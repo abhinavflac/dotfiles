@@ -1,1 +1,16 @@
 firefox
+aspell
+duf
+endeavouros-branding
+eos-apps-info
+eos-log-tool
+glances
+hwinfo
+inxi
+meld
+python-defusedxml
+python-jinja
+python-packaging
+tldr
+welcome
+ex-vi-compat
