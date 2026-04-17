@@ -25,7 +25,14 @@ else
     echo "warning: packages-aur.txt not found."
 fi
 
-echo ":: Running post-install cleanup (3/5)"
+echo ":: Setting up Shared Drive mount (3/6)"
+if [ -f scripts/mount-setup.sh ]; then
+    bash scripts/mount-setup.sh
+else
+    echo "warning: scripts/mount-setup.sh not found."
+fi
+
+echo ":: Running post-install cleanup (4/6)"
 if [ -f remove-packages.txt ]; then
     while read -r pkg; do
         [ -z "$pkg" ] && continue
@@ -36,7 +43,7 @@ if [ -f remove-packages.txt ]; then
     done < remove-packages.txt
 fi
 
-echo ":: Restoring custom mewline source (4/5)"
+echo ":: Restoring custom mewline source (5/6)"
 if ! command -v rsync &> /dev/null || ! command -v stow &> /dev/null; then
     sudo pacman -S --needed --noconfirm rsync stow
 fi
@@ -49,12 +56,14 @@ fi
 
 echo ":: Clearing defaults to prevent stow conflicts..."
 # Remove default directories & files that block stow from linking our custom dots
-for app in btop fastfetch hypr kitty rofi starship tmux yazi zsh cava dunst flameshot micro nemo swaync; do
+for app in btop fastfetch hypr kitty rofi starship tmux yazi zsh cava dunst flameshot micro nemo swaync menus; do
     rm -rf "$HOME/.config/$app"
 done
 rm -f "$HOME/.bashrc" "$HOME/.bash_profile" "$HOME/.config/starship.toml" "$HOME/.zshenv"
 
-echo ":: Linking configurations via stow (5/5)"
+echo ":: Linking configurations via stow (6/6)"
 stow all-configs
 
+echo ":: Rebuilding KDE service cache..."
+kbuildsycoca6 --noincremental
 echo ":: Setup complete."

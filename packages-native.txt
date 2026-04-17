@@ -259,3 +259,6 @@ zsh
 zsh-autosuggestions
 zsh-history-substring-search
 zsh-syntax-highlighting
+archlinux-xdg-menu
+dolphin
+kio-extras
