@@ -8,4 +8,4 @@ mewline
 nemo-tags
 pawlette
 mpd-mpris
-
+miniconda3

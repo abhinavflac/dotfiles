@@ -167,6 +167,16 @@ The music system is built on a four-layer architecture for maximum control and a
 - **Layer 3: The Interaction (RMPC)** → A beautiful, rust-powered TUI client for managing playlists and browsing your library.
 - **Layer 4: The Visual (Mewline)** → Dynamic Island integration via `mpd-mpris`, showing live track details and visualizers.
 
+### 🎧 Navidrome & Google Drive Server
+My dotfiles automatically provision a high-fidelity FLAC streaming server using Navidrome backed by a Google Drive rclone mount.
+
+**Post-Installation Steps (One-Time Only):**
+Because Google Drive credentials cannot be stored in GitHub, you must link your account once after a fresh install:
+1. Run `rclone config` in your terminal.
+2. Create a new remote and name it **exactly** `gdrive` (Select Google Drive, follow the browser prompts).
+3. The background service (`rclone.service`) will now automatically mount your music to `~/gdrive`.
+4. Run `cd ~/.config/navidrome && docker-compose up -d` to spin up your Navidrome server!
+
 ---
 
 <div align="center">

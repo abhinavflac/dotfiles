@@ -81,18 +81,12 @@ fi
 if [[ -f "$HOME/.config/zsh/prompt.zsh" ]]; then
     source "$HOME/.config/zsh/prompt.zsh"
 fi
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/abhinav/hyprmod/ls/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/abhinav/hyprmod/ls/etc/profile.d/conda.sh" ]; then
-        . "/home/abhinav/hyprmod/ls/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/abhinav/hyprmod/ls/bin:$PATH"
+# Portable Conda Initialization
+# Dynamically source conda if it exists without hardcoding paths.
+for conda_path in "/opt/miniconda3" "$HOME/miniconda3" "$HOME/hyprmod/ls"; do
+    if [ -f "${conda_path}/etc/profile.d/conda.sh" ]; then
+        . "${conda_path}/etc/profile.d/conda.sh"
+        break
     fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+done
 

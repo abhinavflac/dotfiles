@@ -1,0 +1,15 @@
+[Unit]
+Description=Rclone Mount (Google Drive Music)
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/rclone mount gdrive:Music %h/gdrive \
+  --vfs-cache-mode full \
+  --allow-other \
+  --dir-cache-time 72h \
+  --buffer-size 256M
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

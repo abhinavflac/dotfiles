@@ -262,3 +262,6 @@ zsh-syntax-highlighting
 archlinux-xdg-menu
 dolphin
 kio-extras
+rclone
+docker
+docker-compose
